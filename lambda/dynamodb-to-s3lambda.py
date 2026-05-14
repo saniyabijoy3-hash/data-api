@@ -16,4 +16,7 @@ def lambda_handler(event, context):
         new_image = record['dynamodb'].get('NewImage', {})
 
         data = {}
+        
+        for key, value in new_image.items():
+            data[key] = list(value.values())[0]
 
