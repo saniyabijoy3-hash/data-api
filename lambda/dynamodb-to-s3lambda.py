@@ -21,4 +21,13 @@ def lambda_handler(event, context):
             data[key] = list(value.values())[0]
             
         file_name = f"weather_{datetime.now()}.json"
+        
+        response = s3.put_object(
+            Bucket=BUCKET_NAME,
+            Key=file_name,
+            Body=json.dumps(data,indent=4)
+        )
+
+        print(response)
+        
 
