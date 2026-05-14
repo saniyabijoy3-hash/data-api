@@ -20,3 +20,7 @@ LIST @my_stage;
 CREATE OR REPLACE TABLE weather1_table (
     data VARIANT
 );
+
+COPY INTO weather1_table(data)
+FROM @my_stage
+FILE_FORMAT = (TYPE = JSON);
