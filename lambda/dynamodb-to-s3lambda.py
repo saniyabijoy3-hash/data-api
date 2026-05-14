@@ -19,4 +19,6 @@ def lambda_handler(event, context):
         
         for key, value in new_image.items():
             data[key] = list(value.values())[0]
+            
+        file_name = f"weather_{datetime.now()}.json"
 
