@@ -24,3 +24,7 @@ CREATE OR REPLACE TABLE weather1_table (
 COPY INTO weather1_table(data)
 FROM @my_stage
 FILE_FORMAT = (TYPE = JSON);
+
+SELECT data
+FROM weather1_table
+LIMIT 1;
