@@ -36,3 +36,10 @@ SELECT
     data:weather::STRING AS weather,
     data:time::TIMESTAMP AS weather_time
 FROM weather1_table;
+
+CREATE OR REPLACE PIPE weather_pipe
+AUTO_INGEST = FALSE
+AS
+COPY INTO weather1_table
+FROM @my_stage
+FILE_FORMAT = (TYPE = JSON);
