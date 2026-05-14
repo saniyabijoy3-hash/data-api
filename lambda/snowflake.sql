@@ -45,3 +45,6 @@ FROM @my_stage
 FILE_FORMAT = (TYPE = JSON);
 
 ALTER PIPE weather_pipe REFRESH;
+
+
+SHOW PIPES;
