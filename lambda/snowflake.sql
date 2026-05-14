@@ -16,3 +16,7 @@ CREDENTIALS = (
 FILE_FORMAT = weather_json;
 
 LIST @my_stage;
+
+CREATE OR REPLACE TABLE weather1_table (
+    data VARIANT
+);
