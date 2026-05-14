@@ -3,3 +3,6 @@ CREATE OR REPLACE SCHEMA weather1_schema;
 
 USE DATABASE weather1_db;
 USE SCHEMA weather1_schema;
+
+CREATE OR REPLACE FILE FORMAT weather_json
+TYPE = JSON;
