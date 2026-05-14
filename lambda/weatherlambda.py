@@ -17,4 +17,10 @@ url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}
 response = urllib.request.urlopen(url)
 
 data = json.loads(response.read())
- 
+weather_data = {
+        "city": data["name"],
+        "temperature": str(data["main"]["temp"]),
+        "humidity": str(data["main"]["humidity"]),
+        "weather_condition": data["weather"][0]["main"]
+    }
+
