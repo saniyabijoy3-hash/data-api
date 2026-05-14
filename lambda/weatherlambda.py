@@ -26,5 +26,4 @@ weather_data = {
 }
 
 table.put_item(Item=weather_data)
-
 return weather_data
