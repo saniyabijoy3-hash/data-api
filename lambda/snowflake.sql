@@ -43,3 +43,5 @@ AS
 COPY INTO weather1_table
 FROM @my_stage
 FILE_FORMAT = (TYPE = JSON);
+
+ALTER PIPE weather_pipe REFRESH;
