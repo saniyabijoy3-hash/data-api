@@ -28,3 +28,11 @@ FILE_FORMAT = (TYPE = JSON);
 SELECT data
 FROM weather1_table
 LIMIT 1;
+
+SELECT
+    data:city::STRING AS city,
+    data:temperature::FLOAT AS temperature,
+    data:humidity::INTEGER AS humidity,
+    data:weather::STRING AS weather,
+    data:time::TIMESTAMP AS weather_time
+FROM weather1_table;
