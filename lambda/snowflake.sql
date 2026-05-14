@@ -48,3 +48,4 @@ ALTER PIPE weather_pipe REFRESH;
 
 SHOW PIPES;
 desc pipe weather_pipe;
+SELECT * FROM weather1_table;
