@@ -30,4 +30,8 @@ def lambda_handler(event, context):
 
         print(response)
         
+        return {
+        'statusCode': 200
+    }
+        
 
