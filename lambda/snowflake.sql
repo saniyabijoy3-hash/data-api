@@ -46,5 +46,5 @@ FILE_FORMAT = (TYPE = JSON);
 
 ALTER PIPE weather_pipe REFRESH;
 
-
 SHOW PIPES;
+desc pipe weather_pipe;
